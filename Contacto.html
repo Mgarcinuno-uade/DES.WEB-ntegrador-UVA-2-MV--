@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Mi Cursada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <!-- Menú de navegación principal -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Avisos.html">Avisos</a></li>
+      <li><a href="About.html">Sobre mí</a></li>
+      <li><a href="Materias2025.html">Materias 2025</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Contenido principal -->
+<main>
+  <h1>Contacto</h1>
+  <section class="contenedor-contacto">
+    <h2>Envíame un mensaje</h2>
+    <form class="formulario-contacto">
+      <div class="campo">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+      <div class="campo">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+      </div>
+      <div class="campo">
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+      </div>
+      <div class="campo">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+
+  <!-- Pie de página opcional -->
+  <footer>
+    <p>© 2025 Mi Cursada</p>
+  </footer>
+
+</body>
+</html>
