@@ -1,3 +1,4 @@
+/* === Reset y estructura base === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -24,69 +25,23 @@ footer {
   flex-direction: column;
 }
 
-.menu-interno {
-  background-color: #ccc;
-  text-align: center;
-  padding: 1rem;
-}
-
-.titulo {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.contenedor-columnas {
-  display: flex;
-  gap: 1rem;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
-  align-items: stretch;
-}
-
-.columna-izquierda {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.fechas-examenes, .bibliografia {
-  background-color: #eee;
-  padding: 1rem;
-}
-
-.columna-derecha {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-}
-
-.actividades-uva {
-  background-color: #eee;
-  padding: 1rem;
-  height: 100%;
-}
-
-.pie-materia {
-  background-color: #eee;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  text-align: center;
-}
-
+/* === Navbar y modo oscuro/claro === */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #2c3e50;
-  padding: 1rem 0;
+  padding: 0.5rem 1rem;
 }
 
 .nav-list {
   display: flex;
-  justify-content: center;
   gap: 2rem;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .nav-list li a {
@@ -104,34 +59,27 @@ footer {
   color: #000;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem 0; /* Reducimos el padding vertical del navbar */
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .nav-list li {
-    text-align: center;
-    margin: 0.2rem 0; /* Reducimos el margen vertical entre elementos */
-  }
-
-  .nav-list li a {
-    display: block;
-    padding: 0.5rem; /* Reducimos el padding vertical de los enlaces */
-    font-size: 1rem; /* Reducimos ligeramente el tamaño de la fuente */
-    border-radius: 0;
-  }
-
-  .nav-list li a:hover {
-    background-color: #1abc9c;
-    color: #000;
-  }
+.modo-toggle {
+  display: flex;
+  gap: 0.5rem;
 }
 
+.modo-toggle button {
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modo-toggle button:hover {
+  background-color: #16a085;
+}
+
+/* === Tabla de materias === */
 .table_component {
   overflow: auto;
   width: 80%;
@@ -150,9 +98,20 @@ footer {
   text-align: left;
 }
 
-.table_component caption {
-  caption-side: top;
-  text-align: left;
+.table_component th,
+.table_component td {
+  border: 1px solid #dededf;
+  padding: 5px;
+}
+
+.table_component th {
+  background-color: #eceff1;
+  color: #000;
+}
+
+.table_component td {
+  background-color: #fff;
+  color: #000;
 }
 
 main h1 {
@@ -162,25 +121,7 @@ main h1 {
   color: #2c3e50;
 }
 
-.table_component th {
-  border: 1px solid #dededf;
-  background-color: #eceff1;
-  color: #000000;
-  padding: 5px;
-}
-
-.table_component td {
-  border: 1px solid #dededf;
-  background-color: #ffffff;
-  color: #000000;
-  padding: 5px;
-}
-
-.contenedor-avisos {
-  margin-top: 2em;
-  margin-left: 2em;
-}
-
+/* === Contacto y formulario === */
 .contenedor-contacto {
   max-width: 1200px;
   margin: 0 auto;
@@ -231,6 +172,13 @@ main h1 {
   resize: vertical;
 }
 
+.campo input:focus,
+.campo textarea:focus {
+  border: 2px solid #1abc9c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
 .formulario-contacto button {
   background-color: #2c3e50;
   color: #ffffff;
@@ -247,6 +195,7 @@ main h1 {
   background-color: #1abc9c;
 }
 
+/* === Página Sobre mí === */
 .foto_personal {
   width: 100%;
   height: auto;
@@ -260,8 +209,7 @@ main h1 {
   font-size: 1.2em;
   margin-top: 1em;
   color: #000000;
-  padding-right: 10%;
-  padding-left: 10%;
+  padding: 0 10%;
 }
 
 .contenido_about {
@@ -270,4 +218,275 @@ main h1 {
   align-items: center;
   flex-direction: column;
   margin-top: 2em;
+}
+
+/* === Columnas y contenido === */
+.menu-interno {
+  background-color: #ccc;
+  text-align: center;
+  padding: 1rem;
+}
+
+.titulo {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.contenedor-columnas {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+.columna-izquierda {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fechas-examenes,
+.bibliografia {
+  background-color: #eee;
+  padding: 1rem;
+}
+
+.columna-derecha {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.actividades-uva {
+  background-color: #eee;
+  padding: 1rem;
+  height: 100%;
+}
+
+.pie-materia {
+  background-color: #eee;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* === Avisos === */
+.contenedor-avisos {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-avisos h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.contenedor-avisos h3 {
+  margin-top: 1.5rem;
+  color: #1abc9c;
+}
+
+.contenedor-avisos ul {
+  padding-left: 1.5rem;
+}
+
+.contenedor-avisos li {
+  margin-bottom: 0.5rem;
+}
+
+/* === Modo oscuro === */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #121212;
+}
+
+body.dark-mode .nav-list li a {
+  color: #f1f1f1;
+}
+
+body.dark-mode .table_component th {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .table_component td {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-mode .formulario-contacto button {
+  background-color: #444;
+}
+
+body.dark-mode .campo input,
+body.dark-mode .campo textarea {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode .campo label {
+  color: #ddd;
+}
+
+body.dark-mode .contenido_about,
+body.dark-mode .texto_personal,
+body.dark-mode main h1 {
+  color: #eee;
+}
+
+body.dark-mode footer {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .fechas-examenes,
+body.dark-mode .bibliografia,
+body.dark-mode .actividades-uva,
+body.dark-mode .pie-materia {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+body.dark-mode .contenedor-avisos {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+body.dark-mode .contenedor-avisos h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .contenedor-avisos h3 {
+  color: #1abc9c;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .modo-toggle {
+    margin-top: 0.5rem;
+    align-self: flex-end;
+  }
+}
+
+/* === Estilos para actividades mejoradas === */
+.actividad-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-left: 4px solid #1abc9c;
+  background-color: rgba(26, 188, 156, 0.05);
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease;
+}
+
+.actividad-item:hover {
+  background-color: rgba(26, 188, 156, 0.1);
+  transform: translateX(5px);
+}
+
+.actividad-titulo {
+  font-weight: bold;
+  margin: 0 0 0.8rem 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.enlaces-actividad {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.enlace-github,
+.enlace-web {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.enlace-github {
+  background-color: #333;
+  color: white;
+}
+
+.enlace-github:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.enlace-web {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.enlace-web:hover {
+  background-color: #16a085;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(26, 188, 156, 0.3);
+}
+
+/* Modo oscuro para actividades */
+body.dark-mode .actividad-item {
+  background-color: rgba(26, 188, 156, 0.1);
+  border-left-color: #1abc9c;
+}
+
+body.dark-mode .actividad-item:hover {
+  background-color: rgba(26, 188, 156, 0.15);
+}
+
+body.dark-mode .actividad-titulo {
+  color: #ffffff;
+}
+
+body.dark-mode .enlace-github {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode .enlace-github:hover {
+  background-color: #666;
+}
+
+/* Responsive para enlaces */
+@media (max-width: 480px) {
+  .enlaces-actividad {
+    flex-direction: column;
+  }
+
+  .enlace-github,
+  .enlace-web {
+    justify-content: center;
+    text-align: center;
+  }
 }

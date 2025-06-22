@@ -8,17 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <!-- Menú de navegación principal -->
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="Avisos.html">Avisos</a></li>
-      <li><a href="About.html">Sobre mí</a></li>
-      <li><a href="Materias2025.html">Materias 2025</a></li>
-      <li><a href="Contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+<header class="navbar">
+  <ul class="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="avisos.html">Avisos</a></li>
+    <li><a href="About.html">Sobre mí</a></li>
+    <li><a href="Materias2025.html">Materias 2025</a></li>
+    <li><a href="Contacto.html">Contacto</a></li>
+  </ul>
+  <div class="modo-toggle">
+    <button onclick="activarModoClaro()">Claro</button>
+    <button onclick="activarModoOscuro()">Oscuro</button>
+  </div>
 </header>
 <!-- Contenido principal -->
 <main>
@@ -28,19 +29,19 @@
     <form class="formulario-contacto">
       <div class="campo">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" >
       </div>
       <div class="campo">
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+        <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" >
       </div>
       <div class="campo">
         <label for="asunto">Asunto:</label>
-        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" >
       </div>
       <div class="campo">
         <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" ></textarea>
       </div>
       <button type="submit">Enviar</button>
     </form>
@@ -51,6 +52,27 @@
   <footer>
     <p>© 2025 Mi Cursada</p>
   </footer>
+<script src="formulario.js"></script>
+<script>
+  // Aplica el modo guardado cuando carga la página
+  window.onload = function() {
+    const modo = localStorage.getItem("modo");
+    if (modo === "oscuro") {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  };
 
+  function activarModoClaro() {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("modo", "claro");
+  }
+
+  function activarModoOscuro() {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("modo", "oscuro");
+  }
+</script>
 </body>
 </html>

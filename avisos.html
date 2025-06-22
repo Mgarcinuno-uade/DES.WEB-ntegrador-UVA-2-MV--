@@ -1,14 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Materias 2025 - Mi Cursada</title>
+  <title>Home - Mi Cursada</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
 <header class="navbar">
   <ul class="nav-list">
     <li><a href="index.html">Inicio</a></li>
@@ -22,49 +21,39 @@
     <button onclick="activarModoOscuro()">Oscuro</button>
   </div>
 </header>
+<!-- Contenido principal -->
 <main>
-  <div class="contenedor-principal">
-    <!-- Título -->
-    <h1 class="titulo">Materias 2025</h1>
+  <h1>Avisos</h1>
+  <section class="contenedor-avisos">
+    <h2>Tareas y Recordatorios</h2>
     
-    <!-- Sección de la tabla -->
-    <section class="contenedor-avisos">
-      <div class="table_component">
-        <table>
-          <thead>
-            <tr>
-              <th>Materia</th>
-              <th>Profesor</th>
-              <th>Curso</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="diseno_desarrolo_web.html">Diseño y Desarrollo Web</a></td>
-              <td>Litovicius, Patricia Carina</td>
-              <td>516035</td>
-            </tr>
-            <tr>
-              <td>Algoritmos y Estructuras de Datos 2</td>
-              <td>Sacco, Andrés Damián</td>
-              <td>513548</td>
-            </tr>
-            <tr>
-              <td>Testing de Aplicaciones</td>
-              <td>Martinez, Franco Leonardo</td>
-              <td>517147</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </div>
+    <!-- Materia: Algoritmos -->
+    <h3>Testing de Aplicaciones</h3>
+    <ul>
+      <li>21/4 - Examen parcial.</li>
+      <li>05/5 - Entrega de Trabajo Práctico</li>
+    </ul>
+
+    <!-- Materia: Diseño Web -->
+    <h3>Algoritmos y estructuras de datos 2</h3>
+    <ul>
+      <li>24/4 - Defensa de trabajo practico.</li>
+      <li>15/5 - Examen parcial.</li>
+    </ul>
+
+    <!-- Materia: Matemáticas -->
+    <h3>Diseño y desarrollo Web</h3>
+    <ul>
+      <li>29/4 - Examen parcial.</li>
+      <li>29/4 - Entrega de trabajos practicos.</li>
+    </ul>
+  </section>
 </main>
 
-<!-- Pie de página -->
-<footer>
-  <p>© 2025 Mi Cursada</p>
-</footer>
+  <!-- Pie de página opcional -->
+  <footer>
+    <p>© 2025 Mi Cursada</p>
+  </footer>
 <script>
   // Aplica el modo guardado cuando carga la página
   window.onload = function() {

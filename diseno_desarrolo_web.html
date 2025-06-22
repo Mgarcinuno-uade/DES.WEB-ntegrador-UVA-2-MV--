@@ -7,16 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>  <!-- Menú de navegación principal -->
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="Avisos.html">Avisos</a></li>
-      <li><a href="About.html">Sobre mí</a></li>
-      <li><a href="Materias2025.html">Materias 2025</a></li>
-      <li><a href="Contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+<header class="navbar">
+  <ul class="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="avisos.html">Avisos</a></li>
+    <li><a href="About.html">Sobre mí</a></li>
+    <li><a href="Materias2025.html">Materias 2025</a></li>
+    <li><a href="Contacto.html">Contacto</a></li>
+  </ul>
+  <div class="modo-toggle">
+    <button onclick="activarModoClaro()">Claro</button>
+    <button onclick="activarModoOscuro()">Oscuro</button>
+  </div>
 </header>
 <main>
 
@@ -50,14 +52,104 @@
       <div class="columna-derecha">
         <section class="actividades-uva">
           <h2>Actividades UVAs</h2>
-          <p><a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA1-ejercicio1-MV-/" target="_blank">Ejercicio individual: HTML - Introducción</p></a>
-          <p><a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA1-ejercicio2-MV-/" target="_blank">Ejercicio individual: HTML - Etiquetas</p></a>
-          <p><a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA1-Intregrador-MV-/index.html" target="_blank">Ejercicio individual: Ejercicio integrador </p></a>
-          <p><a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA2-FormatoTexto-MV-/" target="_blank">Ejercicio individual: Formato de texto</p></a>
-          <p><a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA2-GYM-MV-/" target="_blank">Ejercicio individual: Formato de cajas</p></a>
-          <p><a href="https://mgarcinuno-uade.github.io/DES.WEB-Uni.Medida-MV-/index.html" target="_blank">Ejercicio individual: Unidades de medida</p></a>
-          <p><a href="https://mgarcinuno-uade.github.io/DES.WEB-Grid-y-Flexbox-MV--/index.html" target="_blank">Ejercicio individual: Grid y Flexbox</p></a>
-          <p><a href="index.html" target="_blank">Trabajo práctico Integrador UVA 2</p></a>
+          
+          <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: HTML - Introducción</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/mgarcinuno-uade/DES.WEB-UVA1-ejercicio1-MV-" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA1-ejercicio1-MV-/" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+
+          <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: HTML - Etiquetas</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/mgarcinuno-uade/DES.WEB-UVA1-ejercicio2-MV-" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA1-ejercicio2-MV-/" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+
+          <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: Ejercicio integrador</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/mgarcinuno-uade/DES.WEB-UVA1-Intregrador-MV-" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA1-Intregrador-MV-/index.html" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+
+          <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: Formato de texto</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/mgarcinuno-uade/DES.WEB-UVA2-FormatoTexto-MV-" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA2-FormatoTexto-MV-/" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+
+          <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: Formato de cajas</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/mgarcinuno-uade/DES.WEB-UVA2-GYM-MV-" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA2-GYM-MV-/" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+
+          <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: Unidades de medida</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/mgarcinuno-uade/DES.WEB-Uni.Medida-MV-" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-Uni.Medida-MV-/index.html" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+
+          <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: Grid y Flexbox</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/mgarcinuno-uade/DES.WEB-Grid-y-Flexbox-MV--" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-Grid-y-Flexbox-MV--/index.html" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+          <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: JavaScript</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/mgarcinuno-uade/DES.WEB-Grid-y-Flexbox-MV--" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-Grid-y-Flexbox-MV--/" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+                    <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: Práctica Formulario Javascript </p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/Mgarcinuno-uade/DES.WEB-UVA2-PracticaJavascript.git" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA2-PracticaJavascript/Contacto.html" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+                    <div class="actividad-item">
+            <p class="actividad-titulo">Ejercicio individual: Modo claro y oscuro</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/Mgarcinuno-uade/DES.WEB-UVA2-PracticaJavascript.git" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-UVA2-PracticaJavascript/index.html" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+          <div class="actividad-item">
+            <p class="actividad-titulo">Trabajo práctico Integrador UVA 2</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/Mgarcinuno-uade/DES.WEB-ntegrador-UVA-2-MV--.git" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-ntegrador-UVA-2-MV--/" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+                    <div class="actividad-item">
+            <p class="actividad-titulo">Group 10: Trabajo práctico Obligatorio Avances Proyecto Grupal</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/Mgarcinuno-uade/DES.WEB-Grupo10-Proyecto" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-Grupo10-Proyecto/" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
+                    <div class="actividad-item">
+            <p class="actividad-titulo">Group 10: Trabajo práctico obligatorio Grupal</p>
+            <div class="enlaces-actividad">
+              <a href="https://github.com/Mgarcinuno-uade/DES.WEB-Grupo10-FeriaWeb" target="_blank" class="enlace-github">📁 GitHub</a>
+              <a href="https://mgarcinuno-uade.github.io/DES.WEB-Grupo10-FeriaWeb/" target="_blank" class="enlace-web">🌐 Ver Web</a>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -71,6 +163,26 @@
 <footer>
   <p>© 2025 Mi Cursada</p>
 </footer>
+<script>
+  // Aplica el modo guardado cuando carga la página
+  window.onload = function() {
+    const modo = localStorage.getItem("modo");
+    if (modo === "oscuro") {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  };
 
+  function activarModoClaro() {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("modo", "claro");
+  }
+
+  function activarModoOscuro() {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("modo", "oscuro");
+  }
+</script>
 </body>
 </html>
